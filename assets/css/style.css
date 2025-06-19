@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Noto+Serif+Display:ital,wght@1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,html {
+    max-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8FAFC;
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    padding-bottom: 60px; /* Ajuste conforme a altura do footer */
+}
+
+/* Menu */
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 20vh;
+    background-color: #F8FAFC;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5vh;
+    position: relative; 
+}
+
+nav .logo {
+    max-width: 25%; 
+    height: auto; 
+    width: 20%;
+    object-fit: contain;
+    margin-right: -15vh;
+}
+
+
+nav .menu ul li a {
+    font-size: 2vh;
+    text-decoration: none;
+    color: #000;
+    position: relative; 
+}
+
+nav .menu ul li a:hover {
+    color: #9AA6B2; 
+}
+
+nav .menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; 
+    left: 50%;
+    width: 0;
+    height: 2px; 
+    background: #9AA6B2;
+    transition: all 300ms ease-in-out;
+}
+
+nav .menu ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+i {
+    font-size: 2.5vh;
+    padding: 1vh;
+    display: none;
+}
+
+
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/PLANO\ DE\ FUNDO\ 2\ IMAGEM.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero img {  
+    max-width: 45vh; 
+    object-fit: cover; 
+    margin-top: -20vh; 
+}
+
+.btn {
+    padding: 2vh;
+    background-color: #9AA6B2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2vh;
+    transition: background-color 300ms ease-in-out;
+    
+}
+
+.btn:hover {
+    background-color: #848e97;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vh;
+    padding: 5vh;
+}
+
+/* Sobre nós */
+
+.container-sobre-nos {
+    display: flex;
+    background-size: cover;
+    justify-content: center; 
+    background-attachment: fixed;
+    align-items: center;
+    height: 100vh; 
+    padding-top: 15vh;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25vh;
+    
+}
+
+.content-sobre-nos {
+    background: #FFF;
+    padding: 4vh; 
+    border: 1px solid #dadadad3;
+    border-radius: 2vh; 
+    width: 75vh; 
+    box-sizing: border-box;
+    text-align: left; 
+    position: relative; 
+    z-index: 2; 
+    margin: 0; 
+    transform: translate(-30%, -25%); 
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.384);
+}
+
+.content-sobre-nos h2 {
+    font-weight: 500;
+    font-size: 4.5vh; 
+    letter-spacing: -1px;
+    margin: 0 0 3vh 0; 
+    text-align: left; 
+}
+
+.content-sobre-nos p {
+    font-size: 2.5vh; 
+    letter-spacing: -0.54px;
+    line-height: 113%;
+    margin: 0 0 3vh 0; 
+    text-align: left; 
+}
+
+.img-sobre-nos {
+    position: absolute; 
+    width: 70vh; 
+    height: 65vh; 
+    background: url('../img/restaurante.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 2vh; 
+    z-index: 1; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-15%, -30%);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.384);
+}
+
+/* Menu Pratos */
+
+.container-cardapio {
+    display: grid;
+    max-width: 120vh;
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fill, minmax(32vh, 1fr));
+    gap: 2vh;
+}
+
+.container-cardapio h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 15vh;
+    margin-bottom: 2vh; /* Adiciona espaço abaixo do título */
+    grid-column: 1 / -1; /* Faz o título ocupar toda a largura */
+}
+
+.cardapio-item {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -2vh;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 1.6vh;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cardapio-item a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+}
+
+.cardapio-item h2 {
+    margin: 0 0 1.8vh 0;
+    font-size: 2.5vh;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+    text-align: center;
+}
+
+.cardapio-img {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cardapio-item img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+}
+
+.cardapio-body {
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cardapio-item p {
+    margin: 1vh 0;
+    font-size: 2vh;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cardapio-item a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #9AA6B2;
+}
+
+.cardapio-item a:focus {
+    outline: 1px dotted #9AA6B2;
+}
+
+.cardapio-item a .icon {
+    min-width: 2.4vh;
+    width: 2.4vh;
+    height: 2.4vh;
+    margin-left: 0.5vh;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+}
+
+.cardapio-item:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #9AA6B2;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+/* galeria */
+
+
+.gallery-section {
+    padding: 50px 0;
+}
+
+.gallery-section h2 {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 2.5vh;
+}
+
+
+.gallery-container {
+    max-width: 120vh;
+    margin: 0 auto;
+    padding: 0 2vh;
+}
+
+.carousel {
+    display: block;
+    text-align: left;
+    position: relative;
+    margin-bottom: 2.2vh;
+}
+
+.carousel > input {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.carousel > input:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    margin-left: -500%;
+}
+
+.carousel > input:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    margin-left: -400%;
+}
+
+.carousel > input:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    margin-left: -300%;
+}
+
+.carousel > input:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    margin-left: -200%;
+}
+
+.carousel > input:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    margin-left: -100%;
+}
+
+.carousel > input:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type {
+    margin-left: 0%;
+}
+
+.carousel > input:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) {
+    box-shadow: 0px 0px 0px 5px #9AA6B2;
+}
+
+.carousel > input:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) {
+    box-shadow: 0px 0px 0px 5px #9AA6B2;
+}
+
+.carousel > input:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) {
+    box-shadow: 0px 0px 0px 5px #9AA6B2;
+}
+
+.carousel > input:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) {
+    box-shadow: 0px 0px 0px 5px #9AA6B2;
+}
+
+.carousel > input:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) {
+    box-shadow: 0px 0px 0px 5px #9AA6B2;
+}
+
+.carousel > input:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) {
+    box-shadow: 0px 0px 0px 5px #9AA6B2;
+}
+
+.carousel__slides {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.carousel__slide {
+    position: relative;
+    display: block;
+    flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 300ms ease-out;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.carousel__slide figure {
+    display: flex;
+    margin: 0;
+}
+
+.carousel__slide div {
+    width: 100%;
+    height: 500px; /* Defina a altura desejada */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel__slide div:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 6%; /* Mantém a proporção 3:2 */
+}
+
+.carousel__slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__slide figcaption {
+    align-self: flex-end;
+    padding: 20px 20px 0 20px;
+    flex: 0 0 auto;
+    width: 25%;
+    min-width: 150px;
+}
+
+.carousel__slide .credit {
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.carousel__slide.scrollable {
+    overflow-y: scroll;
+}
+
+.carousel__thumbnails {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin: 0 -10px;
+}
+
+.carousel__slides + .carousel__thumbnails {
+    margin-top: 20px;
+}
+
+.carousel__thumbnails li {
+    flex: 1 1 auto;
+    max-width: calc((100% / 6) - 20px);
+    margin: 0 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.carousel__thumbnails label {
+    display: block;
+    position: relative;
+}
+
+.carousel__thumbnails label:before {
+    display: block;
+    content: "";
+    width: 100%;
+}
+
+.carousel__thumbnails label:hover,
+.carousel__thumbnails label:focus {
+    cursor: pointer;
+}
+
+.carousel__thumbnails label:hover img,
+.carousel__thumbnails label:focus img {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    transition: all 300ms ease-in-out;
+}
+
+.carousel__thumbnails img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* COMECA PARTE CONTATO /*
+
+
+
+/* nome contato encima + texto embaixo*/
+.contato {
+    text-align: center;
+    padding: 40px; /* preenchimento interno todas as direções*/
+    max-width: 600px;
+    margin: auto; 
+}
+
+.contato h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.contato p {
+    color: #555;
+    margin-bottom: 20px; /* margem abaixo do texto*/
+}
+
+/* formulário do contato*/
+form {
+    display: flex; 
+    flex-direction: column; /* forms organizado em coluna, empilhado de cima p/ baixo*/
+    gap: 15px; /* espaçamento de 15 entre as infos*/
+    text-align: left; 
+}
+
+label {
+    font-weight: bold; /* rotulos em negrito*/
+    color: #333;
+}
+
+/* grupo pra deixar email lado a lado */
+.form-grupo {
+    display: flex; /* email e telefone de lado */
+    gap: 30px; /* espaçamento entre email e telefone */
+    justify-content: space-between; /* maximo de espaço entre eles */
+}
+
+.input-grupo { /* campos individuais */
+    display: flex; /* caixa input de email e telefone de lado */
+    flex: 1;
+    flex-direction: column; /* rotulo(label) acima do texto de digitação */
+
+}
+
+.input-grupo label {
+    text-align: left; /* alinha rotulo a esquerda */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* entrada */
+input, textarea {
+    flex: 1;
+    width: 100%;
+    padding: 10px; /* preenchimento interno */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* borda arredondada */
+    background-color: #e0e6ed;
+
+}
+
+textarea {
+    height: 100px;
+    resize: none; /* nao da p mudar o tamanho da caixa de texto*/
+}
+
+/* botao enviar */
+button {
+    background-color: #7d8fa7;
+    color: white;
+    padding: 10px;
+    border: none; /* tirar borda padrão */
+    border-radius: 5px; /* arredondar borda */
+    cursor: pointer; /* muda o mouse pra uma maozinha qnd passar por cima */
+    font-size: 16px;   
+}
+
+button:hover { /* mudar a cor do botao qnd passar por cima*/
+    background-color: #5d6d85;
+}
+
+
+/*COMEÇA PARTE DESENVOLVEDORES*/
+
+
+
+.desenvolvedores {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* orgazina filhos em coluna */
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+/* principal */
+.desenvolvedores {
+    flex-grow: 1; /* conteúdo maior possivel, empurrando o footer para baixo */
+    padding: 40px 20px; /* 40px encima e embaixo, 20px na esquerda e direita */
+}
+
+
+
+.devs {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.dev {
+    text-align: center; /* texto centrazilado */
+    transition: 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.dev img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 50% para deixar a foto redonda */
+    border: 2px solid rgb(88, 88, 88);
+    object-fit: cover; /* a foto cobre o espaço disponivel */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* sombra na foto */
+}
+
+.dev:hover{
+    transform: scale(1.07);
+    
+}
+
+/* footer - rodapé */
+
+footer {
+    background-color: #9AA6B2;
+    color: white;
+    padding: 2vh 0;
+    text-align: center;
+}
+
+/* Conteúdo do rodapé */
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90vh;
+    margin: auto;
+    padding: 2vh;
+    flex-wrap: wrap;
+}
+
+/* Logo do rodapé */
+.footer-conteudo .logo {
+    text-align: center;
+}
+
+.footer-conteudo .logo img {
+    width: 12vh;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Navegação no rodapé */
+.footer-conteudo nav {
+    display: flex;
+    gap: 1.5vh;
+}
+
+.footer-conteudo nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6vh;
+    padding-bottom: 0.5vh;
+    position: relative;
+}
+
+/* Linha animada nos links da navegação */
+.footer-conteudo nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.footer-conteudo nav a:hover::after {
+    width: 100%;
+}
+
+/* Mapa (Google Maps) */
+.footer-conteudo .mapa {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-conteudo .mapa iframe {
+    width: 25vh;
+    height: 15vh;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Créditos do rodapé */
+.creditos {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.2vh;
+    margin-top: 1.5vh;
+}
+
+/* Navegação do rodapé */
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin: 0 1vh;
+}
+
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6vh;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
