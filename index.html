@@ -16,15 +16,26 @@
             <div class="logo">
                 <img src="assets/img/LOGO.png" alt="Logo Costa Branca" class="logo">
             </div>
+
             <div class="menu">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre-nos">Sobre nós</a></li>
-                    <li><a href="#cardapio">Cardápio</a></li>
-                    <li><a href="#pratos">Pratos</a></li>
-                    <li><a href="#formulario">Contato</a></li>
+                    <li><a href="#home" data-translate-key="nav_home">Home</a></li>
+                    <li><a href="#sobre-nos" data-translate-key="nav_about">Sobre nós</a></li>
+                    <li><a href="#cardapio" data-translate-key="nav_menu">Cardápio</a></li>
+                    <li><a href="#pratos" data-translate-key="nav_dishes">Pratos</a></li>
+                    <li><a href="#formulario" data-translate-key="nav_contact">Contato</a></li>
                 </ul>
             </div>
+
+            <div class="language-selector">
+                <a href="#" onclick="changeLanguage('pt')">
+                    <img src="https://flagcdn.com/br.svg" alt="Português" width="30">
+                </a>
+                <a href="#" onclick="changeLanguage('en')">
+                    <img src="https://flagcdn.com/gb.svg" alt="English" width="30">
+                </a>
+            </div>
+
             <div class="rede-social">
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-facebook"></i>
@@ -35,101 +46,68 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <img src="assets/img/LOGO + NOME.png" alt="Logo Costa Branca">
-                <button class="btn"><a href="#">Reserve já</a></button>
+                <button class="btn"><a href="#" data-translate-key="hero_button">Reserve já</a></button>
             </div>
         </section>
 
         <section id="sobre-nos" class="container-sobre-nos">
             <article>
                 <div class="content-sobre-nos">
-                    <h2>Um pouco da nossa história...</h2>
-                    <p>Fundado com a paixão de celebrar a cultura e os sabores do litoral potiguar, o Restaurante Costa
-                        Branca nasceu do sonho de oferecer uma experiência gastronômica sofisticada e acolhedora.
-                        Inspirado
-                        nas belezas do Rio Grande do Norte, homenageia as areias brancas e as águas cristalinas em cada
-                        detalhe do ambiente e cardápio. Unindo culinária regional e toques contemporâneos, transforma
-                        ingredientes frescos e locais em pratos que resgatam memórias afetivas, como a moqueca potiguar
-                        e
-                        frutos do mar recém-pescados. Com uma decoração moderna que remete às paisagens da região e um
-                        atendimento caloroso, o Costa Branca é um espaço de encontro e celebração, onde cada refeição se
-                        torna uma viagem pelos sabores, histórias e tradições do Nordeste.</p>
+                    <h2 data-translate-key="about_title">Um pouco da nossa história...</h2>
+                    <p data-translate-key="about_text">Fundado com a paixão de celebrar a cultura e os sabores do litoral potiguar, o Restaurante Costa Branca nasceu do sonho de oferecer uma experiência gastronômica sofisticada e acolhedora. Inspirado nas belezas do Rio Grande do Norte, homenageia as areias brancas e as águas cristalinas em cada detalhe do ambiente e cardápio. Unindo culinária regional e toques contemporâneos, transforma ingredientes frescos e locais em pratos que resgatam memórias afetivas, como a moqueca potiguar e frutos do mar recém-pescados. Com uma decoração moderna que remete às paisagens da região e um atendimento caloroso, o Costa Branca é um espaço de encontro e celebração, onde cada refeição se torna uma viagem pelos sabores, histórias e tradições do Nordeste.</p>
                 </div>
                 <div class="img-sobre-nos"></div>
             </article>
         </section>
 
         <section class="container-cardapio" id="cardapio">
-            <h2>Conheça nosso cardápio</h2>
-
+            <h2 data-translate-key="menu_title">Conheça nosso cardápio</h2>
             <article class="cardapio-item">
                 <div class="cardapio-wrapper">
-
                     <img class="cardapio-img" src="assets/img/ginga com tapioca.jpg" alt="ginga com tapioca" />
-
                     <div class="cardapio-body">
-                        <h2>Entradas</h2>
-                        <p>
-                            Comece sua experiência com sabores irresistíveis. Nossas entradas são preparadas com
-                            ingredientes frescos e combinações delicadas para despertar o paladar. Explore todas as
-                            opções e escolha a sua favorita!
+                        <h2 data-translate-key="menu_starters_title">Entradas</h2>
+                        <p data-translate-key="menu_starters_text">
+                            Comece sua experiência com sabores irresistíveis. Nossas entradas são preparadas com ingredientes frescos e combinações delicadas para despertar o paladar. Explore todas as opções e escolha a sua favorita!
                         </p>
-                        <a href="#cardapio" class="read-more">
+                        <a href="#cardapio" class="read-more" data-translate-key="menu_learn_more">
                             Saiba mais! <span class="sr-only">about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </a>
                     </div>
                 </div>
             </article>
             <article class="cardapio-item">
-
                 <div class="cardapio-wrapper">
-
                     <img class="cardapio-img" src="assets/img/camarão.jpg" alt="" />
-
                     <div class="cardapio-body">
-                        <h2>Pratos principais</h2>
-                        <p>
-                            Tradição e sofisticação servidas à mesa. Nossos pratos principais trazem o melhor da
-                            culinária potiguar, com ingredientes frescos e combinações irresistíveis. Conheça cada
-                            detalhe e encontre o seu preferido!
+                        <h2 data-translate-key="menu_main_title">Pratos principais</h2>
+                        <p data-translate-key="menu_main_text">
+                            Tradição e sofisticação servidas à mesa. Nossos pratos principais trazem o melhor da culinária potiguar, com ingredientes frescos e combinações irresistíveis. Conheça cada detalhe e encontre o seu preferido!
                         </p>
-                        <a href="#cardapio" class="read-more">
+                        <a href="#cardapio" class="read-more" data-translate-key="menu_learn_more">
                             Saiba mais! <span class="sr-only">about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </a>
                     </div>
                 </div>
             </article>
             <article class="cardapio-item">
-
                 <div class="cardapio-wrapper">
-
                     <img class="cardapio-img" src="assets/img/mungunzá-doce.jpg" alt="" />
-
                     <div class="cardapio-body">
-                        <h2>Sobremesas</h2>
-                        <p>
-                            O toque final perfeito para sua refeição. Nossas sobremesas equilibram tradição e
-                            criatividade, trazendo doces que encantam os sentidos. Explore nossas delícias e escolha a
-                            sua!
+                        <h2 data-translate-key="menu_desserts_title">Sobremesas</h2>
+                        <p data-translate-key="menu_desserts_text">
+                            O toque final perfeito para sua refeição. Nossas sobremesas equilibram tradição e criatividade, trazendo doces que encantam os sentidos. Explore nossas delícias e escolha a sua!
                         </p>
-                        <a href="#cardapio" class="read-more">
+                        <a href="#cardapio" class="read-more" data-translate-key="menu_learn_more">
                             Saiba Mais! <span class="sr-only">about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </a>
                     </div>
@@ -137,11 +115,8 @@
             </article>
         </section>
 
-
-
-
         <section id="pratos" class="gallery-section">
-            <h2>Pratos</h2>
+            <h2 data-translate-key="dishes_title">Pratos</h2>
             <div class="gallery-container">
                 <div class="carousel">
                     <input type="radio" name="slides" checked="checked" id="slide-1">
@@ -150,145 +125,86 @@
                     <input type="radio" name="slides" id="slide-4">
                     <input type="radio" name="slides" id="slide-5">
                     <input type="radio" name="slides" id="slide-6">
+
                     <ul class="carousel__slides">
                         <li class="carousel__slide">
                             <figure>
-                                <div>
-                                    <img src="assets/img/comida1.png" alt="">
-                                </div>
-                                <figcaption>
-                                    Sabores irresistíveis que despertam memórias e felicidade pura.
-                                    <span class="credit">Bife batata</span>
-                                </figcaption>
+                                <div><img src="assets/img/comida1.png" alt=""></div>
+                                <figcaption data-translate-key="dish1_caption">Sabores irresistíveis que despertam memórias e felicidade pura. <span class="credit">Bife batata</span></figcaption>
                             </figure>
                         </li>
                         <li class="carousel__slide">
                             <figure>
-                                <div>
-                                    <img src="assets/img/comida2.png" alt="">
-                                </div>
-                                <figcaption>
-                                    Sabores irresistíveis que despertam memórias e felicidade pura.
-                                    <span class="credit">Salada</span>
-                                </figcaption>
+                                <div><img src="assets/img/comida2.png" alt=""></div>
+                                <figcaption data-translate-key="dish2_caption">Sabores irresistíveis que despertam memórias e felicidade pura. <span class="credit">Salada</span></figcaption>
                             </figure>
                         </li>
                         <li class="carousel__slide">
                             <figure>
-                                <div>
-                                    <img src="assets/img/comida3.png" alt="">
-                                </div>
-                                <figcaption>
-                                    Sabores irresistíveis que despertam memórias e felicidade pura.
-                                    <span class="credit">Macaronada</span>
-                                </figcaption>
+                                <div><img src="assets/img/comida3.png" alt=""></div>
+                                <figcaption data-translate-key="dish3_caption">Sabores irresistíveis que despertam memórias e felicidade pura. <span class="credit">Macarronada</span></figcaption>
                             </figure>
                         </li>
                         <li class="carousel__slide">
                             <figure>
-                                <div>
-                                    <img src="assets/img/comida4.png" alt="">
-                                </div>
-                                <figcaption>
-                                    Sabores irresistíveis que despertam memórias e felicidade pura.
-                                    <span class="credit">Linguiça</span>
-                                </figcaption>
+                                <div><img src="assets/img/comida4.png" alt=""></div>
+                                <figcaption data-translate-key="dish4_caption">Sabores irresistíveis que despertam memórias e felicidade pura. <span class="credit">Linguiça</span></figcaption>
                             </figure>
                         </li>
                         <li class="carousel__slide">
                             <figure>
-                                <div>
-                                    <img src="assets/img/comida5.png" alt="">
-                                </div>
-                                <figcaption>
-                                    Sabores irresistíveis que despertam memórias e felicidade pura.
-                                    <span class="credit">Frutas</span>
-                                </figcaption>
+                                <div><img src="assets/img/comida5.png" alt=""></div>
+                                <figcaption data-translate-key="dish5_caption">Sabores irresistíveis que despertam memórias e felicidade pura. <span class="credit">Frutas</span></figcaption>
                             </figure>
                         </li>
                         <li class="carousel__slide">
                             <figure>
-                                <div>
-                                    <img src="assets/img/comida6.png" alt="">
-                                </div>
-                                <figcaption>
-                                    Sabores irresistíveis que despertam memórias e felicidade pura.
-                                    <span class="credit">Risoto</span>
-                                </figcaption>
+                                <div><img src="assets/img/comida6.png" alt=""></div>
+                                <figcaption data-translate-key="dish6_caption">Sabores irresistíveis que despertam memórias e felicidade pura. <span class="credit">Risoto</span></figcaption>
                             </figure>
                         </li>
                     </ul>
+
                     <ul class="carousel__thumbnails">
-                        <li>
-                            <label for="slide-1"><img src="assets/img/comida1.png" alt=""></label>
-                        </li>
-                        <li>
-                            <label for="slide-2"><img src="assets/img/comida2.png" alt=""></label>
-                        </li>
-                        <li>
-                            <label for="slide-3"><img src="assets/img/comida3.png" alt=""></label>
-                        </li>
-                        <li>
-                            <label for="slide-4"><img src="assets/img/comida4.png" alt=""></label>
-                        </li>
-                        <li>
-                            <label for="slide-5"><img src="assets/img/comida5.png" alt=""></label>
-                        </li>
-                        <li>
-                            <label for="slide-6"><img src="assets/img/comida6.png" alt=""></label>
-                        </li>
+                        <li><label for="slide-1"><img src="assets/img/comida1.png" alt=""></label></li>
+                        <li><label for="slide-2"><img src="assets/img/comida2.png" alt=""></label></li>
+                        <li><label for="slide-3"><img src="assets/img/comida3.png" alt=""></label></li>
+                        <li><label for="slide-4"><img src="assets/img/comida4.png" alt=""></label></li>
+                        <li><label for="slide-5"><img src="assets/img/comida5.png" alt=""></label></li>
+                        <li><label for="slide-6"><img src="assets/img/comida6.png" alt=""></label></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-
-
-
         <section id="formulario">
-
             <section class="contato">
-                <h1>Contato</h1>
-                <p>Fale com a gente e descubra o melhor da nossa gastronomia! Entre em contato para reservas, eventos ou
-                    mais informações. Estamos prontos para te atender.</p>
+                <h1 data-translate-key="contact_title">Contato</h1>
+                <p data-translate-key="contact_text">Fale com a gente e descubra o melhor da nossa gastronomia! Entre em contato para reservas, eventos ou mais informações. Estamos prontos para te atender.</p>
                 <form>
-
-                    <label for="nome">Nome:</label>
-
-                    <input type="text" id="nome" placeholder="Digite seu nome:" required>
-
+                    <label for="nome" data-translate-key="form_name_label">Nome:</label>
+                    <input type="text" id="nome" data-translate-key="form_name_placeholder" placeholder="Digite seu nome:" required>
 
                     <div class="form-grupo">
-
                         <div class="input-grupo">
-
-                            <label for="email">Email:</label>
-
-                            <input type="email" id="email" placeholder="Digite seu email:" required>
+                            <label for="email" data-translate-key="form_email_label">Email:</label>
+                            <input type="email" id="email" data-translate-key="form_email_placeholder" placeholder="Digite seu email:" required>
                         </div>
                         <div class="input-grupo">
-
-
-
-                            <label for="telefone">Telefone:</label>
-
-
-                            <input type="tel" id="telefone" placeholder="Digite seu Telefone:" required>
+                            <label for="telefone" data-translate-key="form_phone_label">Telefone:</label>
+                            <input type="tel" id="telefone" data-translate-key="form_phone_placeholder" placeholder="Digite seu Telefone:" required>
                         </div>
                     </div>
 
-
-                    <label for="mensagem">Mensagem:</label>
-
-                    <textarea id="mensagem" placeholder="Deixe uma mensagem:" required></textarea>
-
-                    <button type="submit">Enviar</button>
+                    <label for="mensagem" data-translate-key="form_message_label">Mensagem:</label>
+                    <textarea id="mensagem" data-translate-key="form_message_placeholder" placeholder="Deixe uma mensagem:" required></textarea>
+                    <button type="submit" data-translate-key="form_button">Enviar</button>
                 </form>
             </section>
         </section>
 
         <section class="desenvolvedores">
-            <h2>Desenvolvedores</h2>
+            <h2 data-translate-key="devs_title">Desenvolvedores</h2>
             <div class="devs">
                 <div class="dev">
                     <img src="assets/img/GABRIEL.png" alt="Gabriel Soares">
@@ -310,27 +226,24 @@
         <div class="footer-conteudo">
             <div class="logo">
                 <img src="assets/img/LogoBrancaAtt.png" alt="Costa Branca">
-
             </div>
             <div class="footer-nav">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre-nos">Sobre nós</a></li>
-                    <li><a href="#cardapio">Cardápio</a></li>
-                    <li><a href="#pratos">Pratos</a></li>
-                    <li><a href="#formulario">Contato</a></li>
+                    <li><a href="#home" data-translate-key="nav_home">Início</a></li>
+                    <li><a href="#sobre-nos" data-translate-key="nav_about">Sobre nós</a></li>
+                    <li><a href="#cardapio" data-translate-key="nav_menu">Cardápio</a></li>
+                    <li><a href="#pratos" data-translate-key="nav_dishes">Pratos</a></li>
+                    <li><a href="#formulario" data-translate-key="nav_contact">Contato</a></li>
                 </ul>
             </div>
-
             <div class="mapa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.062576447448!2d-37.11928552414512!3d-4.929190050461042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b745af7b38bb3f%3A0x13fae076b6d70ace!2sPraia%20de%20Upanema!5e0!3m2!1spt-BR!2sbr!4v1738950292491!5m2!1spt-BR!2sbr"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.062576447448!2d-37.11928552414512!3d-4.929190050461042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b745af7b38bb3f%3A0x13fae076b6d70ace!2sPraia%20de%20Upanema!5e0!3m2!1spt-BR!2sbr!4v1738950292491!5m2!1spt-BR!2sbr"></iframe>
             </div>
         </div>
-        <p class="creditos">© 2025 Restaurante Costa Branca. Todos os direitos reservados. Desenvolvido por Gabriel e
-            Davi.</p>
+        <p class="creditos" data-translate-key="footer_credits">© 2025 Restaurante Costa Branca. Todos os direitos reservados. Desenvolvido por Gabriel e Davi.</p>
     </footer>
 
+    <script src="assets/js/translate.js"></script>
 </body>
 
 </html>

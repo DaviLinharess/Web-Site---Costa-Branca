@@ -745,3 +745,67 @@ footer {
 .footer-nav ul li a:hover {
     text-decoration: underline;
 }
+
+
+/* Seletor de Idioma */
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector a {
+  margin: 0 5px; /* Espaçamento entre as bandeiras */
+  display: inline-block;
+}
+
+.language-selector img {
+  border-radius: 50%; /* Deixa as bandeiras redondas, opcional */
+  box-shadow: 0 0 2px rgba(0,0,0,0.5); /* Sombra suave, opcional */
+  transition: transform 0.2s; /* Animação suave */
+}
+
+.language-selector img:hover {
+  transform: scale(1.1); /* Aumenta um pouco a bandeira ao passar o mouse */
+}
+
+/* Adicione ou modifique esta regra no seu style.css */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between; /* Espaça os itens horizontalmente */
+  align-items: center;          /* Alinha os itens verticalmente ao centro */
+  width: 100%;
+  padding: 1rem 2rem; /* Adiciona um espaçamento interno (ajuste se necessário) */
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+/* Ajuste para o menu, seletor e redes sociais para que se alinhem bem */
+.menu ul {
+    display: flex; /* Garante que os itens do menu fiquem em linha */
+    align-items: center;
+}
+
+.language-selector, .rede-social {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adiciona um espaço entre os ícones */
+}
+
+/* bandeiras */
+.language-selector a {
+  display: inline-block;
+}
+
+/* ícones redondos */
+.language-selector img {
+  width: 30px;          /* largura fixa */
+  height: 30px;         /* altura igual a largura */
+  object-fit: cover;    /* imagem cobra a aera */
+  border-radius: 50%;   /* círculo perfeito */
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.language-selector img:hover {
+  transform: scale(1.1);
+}
