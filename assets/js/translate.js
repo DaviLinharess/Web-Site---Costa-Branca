@@ -70,7 +70,7 @@ const translations = {
   }
 };
 
-// Função para trocar o idioma
+// função que troca o idioma
 function changeLanguage(lang) {
   const elements = document.querySelectorAll('[data-translate-key]');
   elements.forEach(element => {
@@ -78,15 +78,15 @@ function changeLanguage(lang) {
     const translation = translations[lang] && translations[lang][key];
 
     if (translation) {
-      // Verifica se a chave é para um placeholder
+      // verificar se é pra um placeholder
       if (key.includes('_placeholder')) {
         element.placeholder = translation;
       } else {
-        // Se não, atualiza o conteúdo do texto
-        // Para o link "Saiba mais", precisamos manter o ícone
+        // se nn, atualiza o conteudo
+        // pro link saiba mais, mantem o icone
         if (element.classList.contains('read-more')) {
           const icon = element.querySelector('svg');
-          element.textContent = translation + ' '; // Adiciona espaço antes do ícone
+          element.textContent = translation + ' '; // espaço antes do icone
           if (icon) {
             element.appendChild(icon);
           }
@@ -97,11 +97,11 @@ function changeLanguage(lang) {
     }
   });
 
-  // Atualiza o atributo lang da tag <html>
+  // att o lang da tag <html>
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 }
 
-// Opcional: Define o idioma inicial com base no navegador ou em um padrão
+// define o idioma inicial com base no navegador
 document.addEventListener('DOMContentLoaded', () => {
   const userLang = navigator.language || navigator.userLanguage;
   const lang = userLang.startsWith('pt') ? 'pt' : 'en';
